@@ -1,0 +1,132 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333; }
+
+.carte-0 {
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/cards.png");
+  background-position-x: 0px;
+  background-position-y: 0px; }
+
+.carte-1 {
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/cards.png");
+  background-position-x: 0px;
+  background-position-y: -100px; }
+
+.carte-2 {
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/cards.png");
+  background-position-x: 0px;
+  background-position-y: -200px; }
+
+.carte-3 {
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/cards.png");
+  background-position-x: 0px;
+  background-position-y: -300px; }
+
+.carte-4 {
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/cards.png");
+  background-position-x: 0px;
+  background-position-y: -400px; }
+
+.carte-5 {
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/cards.png");
+  background-position-x: 0px;
+  background-position-y: -500px; }
+
+.carte-6 {
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/cards.png");
+  background-position-x: 0px;
+  background-position-y: -600px; }
+
+.carte-7 {
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/cards.png");
+  background-position-x: 0px;
+  background-position-y: -700px; }
+
+.carte-8 {
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/cards.png");
+  background-position-x: 0px;
+  background-position-y: -800px; }
+
+.carte-9 {
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/cards.png");
+  background-position-x: 0px;
+  background-position-y: -900px; }
+
+.carte-10 {
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/cards.png");
+  background-position-x: 0px;
+  background-position-y: -1000px; }
+
+.carte-11 {
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/cards.png");
+  background-position-x: 0px;
+  background-position-y: -1100px; }
+
+.carte-12 {
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/cards.png");
+  background-position-x: 0px;
+  background-position-y: -1200px; }
+
+.carte-13 {
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/cards.png");
+  background-position-x: 0px;
+  background-position-y: -1300px; }
+
+.nonVisible {
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/dos.png"); }
+
+.center {
+  margin: 0 auto;
+  width: 755px;
+  text-align: center; }
+
+.duree {
+  font-size: 20px; }
+
+table {
+  border: 1px solid black;
+  border-spacing: 5px; }
+
+#maProgression {
+  width: 755px;
+  background-color: grey; }
+
+#barreDeProgression {
+  width: 1%;
+  height: 30px;
+  background-color: blue;
+  text-align: center;
+  line-height: 30px;
+  color: white; }
+
+/*# sourceMappingURL=memory.css.map */

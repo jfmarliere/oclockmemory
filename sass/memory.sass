@@ -1,0 +1,62 @@
+body
+  font: 100% Helvetica, sans-serif
+  color: #333
+
+//Chemin du fichier PNG contenant toutes nos images de cartes
+$image-url: "../images/cards.png"
+
+$image-size: 100px //taille d'une carte : elles sont carrées, faisant 100 pixels de côté.
+
+//on génére avec une boucle les 14 images des cartes en les mettant dans une classe
+//la boucle démarrera avec la variable $i à 0 comme valeur, et cette boucle se terminera quand $i aurait atteint 14.
+// Attention : $i commence à 0 et sa valeur finale sera 13, car à 14 la boucle s'arrête et ne continue pas.
+//  Chaque cycle de la boucle ajoute 1 à la variable $i
+@for $i from 0 through 13
+  //on gérére le nom de la class contenant l'image : elle sera nommée par le préfixe "carte" séparée d'un tiret "-", puis un nombre (de 0 à 13)
+  //le but est d'avoir 14 classes, une pour chaque image nommées de la sorte : image-0, image-1, image-3, etc... jusqu'à image-13
+  .carte-#{$i}
+    width: $image-size  //défini la largeur de l'image
+    height: $image-size //défini la hauteur de l'image
+    background-image: url($image-url)  //défini le fichier de l'image
+    //point de départ pour la largeur de l'image : toujours 0 car l'image ne fait 100px de large,
+    // donc il sera affiché 100 pixels en largeur : de 0px à 100px (la largeur de l'image est définie dans la propriété width)
+    background-position-x : 0px
+
+    //point de départ pour la hauteur de l'image : vu que l'image fait 100px de hauteur, à chaque itération de la boucle
+    // on ajoute -100 pour afficher les 100 pixels en dessous de l'image précédente
+    background-position-y : $i*-100px
+
+//classe qui cache la carte et affichant à la place une autre image : dos.png
+.nonVisible
+  width: $image-size //défini la largeur de l'image
+  height: $image-size //défini la hauteur de l'image
+  background-image: url("../images/dos.png")  //défini le fichier de l'image
+
+// classe pour centrer le texte
+.center
+  margin: 0 auto
+  width: 755px
+  text-align: center
+
+//classe pour formater le texte de la durée
+.duree
+  font-size: 20px
+
+//parametres des balises tables
+table
+  border: 1px solid black
+  border-spacing: 5px //distance entre chacune les cellules voicines pour la bordure
+
+//parametres du conteneur de la barre de progression
+#maProgression
+  width: 755px
+  background-color: grey
+
+//parametre de la barre de progression qui augmente au fure et à mesure
+#barreDeProgression
+  width: 1%
+  height: 30px
+  background-color: blue
+  text-align: center //centre le texte
+  line-height: 30px //hauteur de ligne
+  color: white //couleur du texte
