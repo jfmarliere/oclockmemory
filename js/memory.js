@@ -68,6 +68,7 @@ function cacherCarte(carte) {
 }
 //on change l'attribut perdu à 0 dans la BDD en utilisant ajax et le fichier ajax.php
 function sauvegarderPaireEnBDD(carte) {
+    //on retire le texte 'carte-' du nom de la carte pour n'avoir que le numéro afin de pouvoir le traiter en base de donnée
     numero = carte.getAttribute('name').replace('carte-','');
     $.ajax({
         url : 'ajax.php?numero='+numero // Envoi le numéro de la carte à la ressource ciblée (ajax.php)
