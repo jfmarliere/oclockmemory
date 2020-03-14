@@ -2,7 +2,7 @@ let premiereCarte = false; //premiere carte cliquée
 let deuxiemeCarte = false; //deuxieme carte cliquée
 let barre = 0; //% de la barre de progression
 let paires = 0; //nombre de paires trouvées
-let s = 0;
+let s = 0; //variable contenant le nombre de secondes
 let ajoutSecondes = 1; //nombre de secondes ajouté à S à chaque interval
 
 //fonction pour comparer les 2 carte cliquées, prenant en paramètre la dernière carte que l'on a cliquée
@@ -51,7 +51,7 @@ function majBarreDeProgression(val) {
     if (paires >= 14) {   //si les 14 paires sont trouvées, parties gagnée !
         barre = 100; //la barre passe à 100%
         ajoutSecondes = 0; // on stop l'incrémentation du compteur s pour bloquer la durée
-        alert('Partie Gagnée !!!\n En ' + s + ' secondes');
+        alert('Partie Gagnée !!!\n En ' + s + ' secondes'); //on affiche un message (popup)
     }
     $('#barreDeProgression').width(barre + '%'); //on met à jour la largeur de la barre
     $('#barreDeProgression').html(barre + '%'); //on met à jour le texte de la barre
@@ -70,6 +70,6 @@ function cacherCarte(carte) {
 function sauvegarderPaireEnBDD(carte) {
     numero = carte.getAttribute('name').replace('carte-','');
     $.ajax({
-        url : 'ajax.php?numero='+numero // La ressource ciblée
+        url : 'ajax.php?numero='+numero // Envoi le numéro de la carte à la ressource ciblée (ajax.php)
     });
 }
